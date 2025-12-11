@@ -1,0 +1,26 @@
+﻿<h2>🍕 Order Your Pizza</h2>
+
+<form method="post">
+    <h4>Choose Size:</h4>
+    <input type="radio" name="size" value="Small" checked> Small<br>
+    <input type="radio" name="size" value="Medium"> Medium<br>
+    <input type="radio" name="size" value="Large"> Large<br>
+
+    <h4>Toppings:</h4>
+    <input type="checkbox" name="toppings" value="Cheese"> Cheese<br>
+    <input type="checkbox" name="toppings" value="Pepperoni"> Pepperoni<br>
+    <input type="checkbox" name="toppings" value="Mushrooms"> Mushrooms<br>
+
+    <label>Quantity:</label><br>
+    <input type="number" name="quantity" min="1" value="1"><br><br>
+
+    <input type="submit" value="Order Pizza" class="btn btn-primary">
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success mt-3">@ViewBag.Message</div>
+}
+
+<a href="/Home/OrderHistory" class="btn btn-secondary mt-3">View Order History</a>
+<a href="/Account/Logout" class="btn btn-danger mt-3">Logout</a>

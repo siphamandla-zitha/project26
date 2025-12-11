@@ -1,0 +1,24 @@
+﻿namespace project26.Views.Home
+{
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h2>Create Account</h2>
+
+<form method="post">
+    <label>Username:</label><br>
+    <input type="text" name="username" required /><br>
+    <label>Password:</label><br>
+    <input type="password" name="password" required /><br><br>
+    <input type="submit" value="Register" class="btn btn-success" />
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
+
+<p>Already have an account? <a href="/Account/Login">Login</a></p>
+
+}
